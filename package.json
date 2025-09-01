@@ -7,6 +7,7 @@
     "bin"
   ],
   "bin": {
+    "envlf": "./bin/index.js",
     "dotenv-local-first": "./bin/index.js"
   },
   "scripts": {
