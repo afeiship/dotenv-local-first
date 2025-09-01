@@ -36,7 +36,7 @@ function loadEnv() {
   files.forEach((file) => {
     const filePath = path.resolve(file);
     if (fs.existsSync(filePath)) {
-      dotenv.config({ path: filePath, override: true });
+      dotenv.config({ path: filePath, override: true, debug: false });
     }
   });
 }

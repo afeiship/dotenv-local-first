@@ -11,6 +11,9 @@
     "dotenv-local-first": "./bin/index.js"
   },
   "scripts": {
+    "dev": "node ./bin/index.js",
+    "dev:beta": "NODE_ENV=beta node ./bin/index.js",
+    "dev:prod": "NODE_ENV=production node ./bin/index.js",
     "release": "release-it",
     "prepare": "husky",
     "pretty": "prettier --write bin"
