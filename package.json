@@ -1,6 +1,5 @@
 {
-  "name": "dotenv-local-first",
-  "private": true,
+  "name": "@jswork/dotenv-local-first",
   "version": "1.0.0",
   "description": "Dotenv local first cli.",
   "type": "module",
@@ -24,9 +23,9 @@
     ]
   },
   "keywords": [
-    "dotenv-local-first",
-    "javascript",
-    "templates"
+    "cli",
+    "dotenv",
+    "local-first"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -37,5 +36,9 @@
   "dependencies": {
     "commander": "^11.1.0",
     "dotenv": "^17.2.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
