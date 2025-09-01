@@ -7,6 +7,9 @@ package-lock.json
 pnpm-lock.yaml
 .DS_Store
 
+# Environment variables
+.env*
+
 
 # vscode
 .vscode
