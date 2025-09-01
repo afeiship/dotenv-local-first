@@ -1,34 +1,37 @@
 {
-  "name": "@jswork/ushell-module-aws",
+  "name": "dotenv-local-first",
+  "private": true,
   "version": "1.0.0",
-  "description": "Aws cli for ushell module.",
-  "main": "index.sh",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/afeiship/ushell-module-aws.git"
+  "description": "Dotenv local first cli.",
+  "type": "module",
+  "files": [
+    "bin"
+  ],
+  "bin": {
+    "dotenv-local-first": "./bin/index.js"
+  },
+  "scripts": {
+    "release": "release-it",
+    "prepare": "husky",
+    "pretty": "prettier --write bin"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run pretty"
+    ]
   },
   "keywords": [
-    "ushell",
-    "shell",
-    "unix",
-    "module",
-    "aws",
-    "s3",
-    "cli"
+    "dotenv-local-first",
+    "javascript",
+    "templates"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/afeiship/ushell-module-aws/issues"
-  },
-  "homepage": "https://github.com/afeiship/ushell-module-aws",
-  "scripts": {
-    "release": "release-it"
-  },
   "devDependencies": {
-    "release-it": "^14.2.1"
+    "husky": "^9.0.6",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
+  "dependencies": {
+    "commander": "^11.1.0"
   }
 }

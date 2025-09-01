@@ -3,16 +3,19 @@ bower_components
 coverage
 npm-debug.log
 yarn.lock
-Gemfile.lock
-yarn-error.log
 package-lock.json
+pnpm-lock.yaml
 .DS_Store
-.idea
-*.zip
-*.tar.gz
+
 
 # vscode
 .vscode
 .history
+.idea
 
+# python cache
+__pycache__
 
+# link
+@jswork
+@afeiship
