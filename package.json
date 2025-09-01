@@ -1,6 +1,6 @@
 {
   "name": "@jswork/dotenv-local-first",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dotenv local first cli.",
   "type": "module",
   "files": [
