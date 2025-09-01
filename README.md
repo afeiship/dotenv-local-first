@@ -4,9 +4,7 @@
 ## Installation
 
 ```sh
-npm install -g dotenv-local-first
-# or
-pnpm install -g dotenv-local-first
+yarn add --dev @jswork/dotenv-local-first
 ```
 
 ## Usage
