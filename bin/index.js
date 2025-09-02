@@ -15,6 +15,9 @@ const program = new Command();
 program.version(pkg.version);
 program
   .addOption(new Option('-v, --verbose', 'show verbose log'))
+  .addOption(
+    new Option('-d, --debug', 'show debug info when loading env files')
+  )
   .parse(process.argv);
 
 /**
@@ -23,7 +26,8 @@ program
  */
 
 // 加载环境变量的函数
-function loadEnv() {
+function loadEnv(options = {}) {
+  const { debug = false } = options;
   const mode = process.env.NODE_ENV || 'development';
   // prettier-ignore
   const files = [
@@ -36,7 +40,7 @@ function loadEnv() {
   files.forEach((file) => {
     const filePath = path.resolve(file);
     if (fs.existsSync(filePath)) {
-      dotenv.config({ path: filePath, override: true, quiet: true });
+      dotenv.config({ path: filePath, override: true, quiet: !debug });
     }
   });
 }
@@ -54,7 +58,7 @@ class CliApp {
 
   run() {
     // 首先加载环境变量
-    loadEnv();
+    loadEnv({ debug: this.opts.debug });
 
     this.log('Environment variables loaded');
 
