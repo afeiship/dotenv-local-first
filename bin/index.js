@@ -15,9 +15,7 @@ const program = new Command();
 program.version(pkg.version);
 program
   .addOption(new Option('-v, --verbose', 'show verbose log'))
-  .addOption(
-    new Option('-d, --debug', 'show debug info when loading env files')
-  )
+  .addOption(new Option('-d, --debug', 'show debug info when loading env files'))
   .parse(process.argv);
 
 /**
